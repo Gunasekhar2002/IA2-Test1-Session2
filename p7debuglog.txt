@@ -1,0 +1,141 @@
+ gcc -g p6final.c; ./a.out
+p6final.c: In function ‘input_string’:
+p6final.c:7:3: warning: implicit declaration of function ‘gets’; did you mean ‘fgets’? [-Wimplicit-function-declaration]
+   gets(a);
+   ^~~~
+   fgets
+p6final.c: In function ‘str_reverse’:
+p6final.c:14:19: error: ‘str’ undeclared (first use in this function)
+     scanf( "%s", &str);
+                   ^~~
+p6final.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+p6final.c:15:11: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+     len = strlen(str);
+           ^~~~~~
+p6final.c:15:11: warning: incompatible implicit declaration of built-in function ‘strlen’
+p6final.c:15:11: note: include ‘<string.h>’ or provide a declaration of ‘strlen’
+p6final.c:31:55: warning: format ‘%s’ expects argument o
+ gcc -g p6final.c; ./a.out
+p6final.c: In function ‘input_string’:
+p6final.c:7:3: warning: implicit declaration of function ‘gets’; did you mean ‘fgets’? [-Wimplicit-function-declaration]
+   gets(a);
+   ^~~~
+   fgets
+p6final.c: In function ‘str_reverse’:
+p6final.c:14:19: error: ‘str’ undeclared (first use in this function)
+     scanf( "%s", &str);
+                   ^~~
+p6final.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+p6final.c:15:11: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+     len = strlen(str);
+           ^~~~~~
+p6final.c:15:11: warning: incompatible implicit declaration of built-in function ‘strlen’
+p6final.c:15:11: note: include ‘<string.h>’ or provide a declaration of ‘strlen’
+p6final.c:31:55: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘int’ [-Wformat
+ gcc -g p6final.c; ./a.out
+p6final.c: In function ‘input_string’:
+p6final.c:7:3: warning: implicit declaration of function ‘gets’; did you mean ‘fgets’? [-Wimplicit-function-declaration]
+   gets(a);
+   ^~~~
+   fgets
+p6final.c: In function ‘str_reverse’:
+p6final.c:14:19: error: ‘str’ undeclared (first use in this function)
+     scanf( "%s", &str);
+                   ^~~
+p6final.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+p6final.c:15:11: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+     len = strlen(str);
+           ^~~~~~
+p6final.c:15:11: warning: incompatible implicit declaration of built-in function ‘strlen’
+p6final.c:15:11: note: include ‘<string.h>’ or provide a declaration of ‘strlen’
+p6final.c:31:55: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘int’ [-Wformat=]
+     printf (" The reverse of the original string is: %s ", a);
+                                                      ~^
+ gcc -g p6final.c; ./a.out
+p6final.c: In function ‘input_string’:
+p6final.c:7:3: warning: implicit declaration of function ‘gets’; did you mean ‘fgets’? [-Wimplicit-function-declaration]
+   gets(a);
+   ^~~~
+   fgets
+p6final.c: In function ‘str_reverse’:
+p6final.c:14:19: error: ‘str’ undeclared (first use in this function)
+     scanf( "%s", &str);
+                   ^~~
+p6final.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+p6final.c:15:11: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+     len = strlen(str);
+           ^~~~~~
+p6final.c:15:11: warning: incompatible implicit declaration of built-in function ‘strlen’
+p6final.c:15:11: note: include ‘<string.h>’ or provide a declaration of ‘strlen’
+p6final.c:31:55: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘int’ [-Wformat
+ gcc -g p7final.c; ./a.out
+Enter the base and height for a triangle:1 2
+The area of triangle with base=1.000000 and altitude=2.000000 is 1.000000 
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x850: file p7final.c, line 26.
+(gdb) r
+Starting program: /home/runner/IA2-Test1-Session2-1/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p7final.c:26
+warning: Source file is more recent than executable.
+26    a=input_triangle();
+(gdb) s
+input_triangle () at p7final.c:8
+8   {
+(gdb) n
+10  printf("Enter the base and height for a triangle:");
+(gdb) n
+11    scanf("%f%f",&a.base,&a.height);
+(gdb) n
+Enter the base and height for a triangle:1 2
+12    return a;
+(gdb) p a
+$1 = {base = 1, height = 2, area = 1.40129846e-45}
+(gdb) n
+13  }
+(gdb) n
+main () at p7final.c:27
+27    a=find_area(a);
+(gdb) s
+find_area (t=...) at p7final.c:16
+16    t.area=0.5*(t.base)*(t.height);
+(gdb) n
+17    return t;
+(gdb) p t
+$2 = {base = 1, height = 2, area = 1}
+(gdb) n
+18  }
+(gdb) n
+main () at p7final.c:28
+28    output(a);
+(gdb) s
+output (t=...) at p7final.c:21
+21    printf("The area of triangle with base=%f and altitude=%f is %f",t.base,t.height,t.area);
+(gdb) n
+22  }
+(gdb) n
+main () at p7final.c:29
+29    return 0;
+(gdb) n
+30  }
+(gdb) c
+Continuing.
+The area of triangle with base=1.000000 and altitude=2.000000 is 1.000000[Inferior 1 (process 1224) exited normally]
+(gdb) 
